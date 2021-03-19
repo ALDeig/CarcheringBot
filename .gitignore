@@ -1,0 +1,7 @@
+# Project exclude paths
+venv
+app/creds.json
+app/id.json
+app/total.json
+.env
+.idea
