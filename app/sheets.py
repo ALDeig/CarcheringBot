@@ -93,7 +93,7 @@ def get_cell(car):
     """
     today = date.today().strftime('%d.%m.%y')
     try:
-        row = gc.get_range(spreadsheet_id, 'B1:B200', 'COLUMNS')[0].index(car) + 1
+        row = gc.get_range(spreadsheet_id, 'B1:B500', 'COLUMNS')[0].index(car) + 1
         col = gc.get_range(spreadsheet_id, 'A1:1')[0].index(today) + 1  
     except ValueError:
         return False
@@ -222,7 +222,7 @@ def get_cars_to_clear():
                                value_range=f'{cell2}:{cell}',
                                major_dimension='DIMENSION_UNSPECIFIED')
     cars_in_table = gc.sheet.values_get(spreadsheet_id=spreadsheet_id,
-                                        value_range='B4:B150')
+                                        value_range='B4:B500')
     cnt = 0
     cars = []
 
